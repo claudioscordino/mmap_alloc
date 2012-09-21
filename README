@@ -1,0 +1,16 @@
+mmap_alloc
+
+Example of Linux kernel driver that allows a user-space program to mmap a
+buffer of contiguous non-cached physical memory.
+
+Usage from user-level:
+
+1. Find the major number assigned to the driver:
+
+   grep mmap_alloc /proc/devices'
+
+2. Create the special file (assuming major number 254)
+   
+   mknod /dev/mmap_alloc c 254 0
+
+
